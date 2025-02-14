@@ -50,7 +50,8 @@ begin
 	       assert (w_sum = x"F" and w_Cout = '1') report "bad with ones" severity failure;
        -- TODO, a few other test cases
        w_addends <= x"55"; w_Cin <= '1'; wait for 10 ns;
-           assert (w_sum = x"B" and w_Cout = '1') report "bad add" severity failure;
+           assert (w_sum = x"B" and w_Cout = '0') report "bad add" severity failure;
+        
 	
 		wait; -- wait forever
 	end process;	
